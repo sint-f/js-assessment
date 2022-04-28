@@ -1,51 +1,30 @@
-if ( typeof window === 'undefined' ) {
-  require('../../app/strings');
-  var expect = require('chai').expect;
+if (typeof window === "undefined") {
+  require("../../app/2-strings");
+  var expect = require("chai").expect;
 }
 
-describe('strings', function() {
-  it('you should be able to reduce duplicate characters to a desired minimum', function() {
-    expect(stringsAnswers.reduceString('aaaabbbb', 2)).to.eql('aabb');
-    expect(stringsAnswers.reduceString('xaaabbbb', 2)).to.eql('xaabb');
-    expect(stringsAnswers.reduceString('aaaabbbb', 1)).to.eql('ab');
-    expect(stringsAnswers.reduceString('aaxxxaabbbb', 2)).to.eql('aaxxaabb');
+describe("strings", function () {
+  it("you should be able to find the index where the substring appeared", function () {
+    const quote =
+      "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
+    const substring = "green eggs and ham";
+
+    expect(stringsAnswers.index(quote, substring)).to.eql(14);
   });
 
-  it('you should be able to wrap lines at a given number of columns, without breaking words', function() {
-    var wrapCol = 5;
-    var inputStrings = [
-      'abcdef abcde abc def',
-      'abc abc abc',
-      'a b c def'
-    ];
-    var outputStrings = [
-      'abcdef\nabcde\nabc\ndef',
-      'abc\nabc\nabc',
-      'a b c\ndef'
-    ];
-    var formattedStr;
+  it("you should be able to check if the quote contains the substring", function () {
+    const quote =
+      "I do not like green eggs and ham. I do not like them, Sam-I-Am.";
 
-    inputStrings.forEach(function(str, index) {
-      formattedStr = stringsAnswers.wordWrap(str, wrapCol);
-      expect(formattedStr).to.eql(outputStrings[index]);
-    });
+    expect(stringsAnswers.contains(quote, "green")).to.be.ok;
+    expect(stringsAnswers.contains(quote, "eggs")).to.be.ok;
+    expect(stringsAnswers.contains(quote, "red")).not.to.be.ok;
+    expect(stringsAnswers.contains(quote, "pepper")).not.to.be.ok;
   });
 
-  it('you should be able to reverse a string', function() {
-    var inputStrings = [
-      'abc',
-      'i am a string of characters',
-      'A man, a plan, a canal: Panama'
-    ];
-    var outputStrings = [
-      'cba',
-      'sretcarahc fo gnirts a ma i',
-      'amanaP :lanac a ,nalp a ,nam A'
-    ];
+  it("you should be able to capitalize the first character of a string", function () {
+    const str = "baRTHOlomEW";
 
-    inputStrings.forEach(function(str, index) {
-      var result = stringsAnswers.reverseString(str);
-      expect(result).to.eql(outputStrings[index]);
-    });
+    expect(stringsAnswers.capitalize(str)).to.eql("Bartholomew");
   });
 });

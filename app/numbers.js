@@ -1,19 +1,35 @@
-exports = typeof window === 'undefined' ? global : window;
+exports = typeof window === "undefined" ? global : window;
 
 exports.numbersAnswers = {
-  valueAtBit: function(num, bit) {
+  /**
+   * Round a number to the nearest integer
+   * @param {Number} num
+   */
+  round: (num) => {},
 
-  },
+  /**
+   * Round a number to the next largest integer
+   * @param {Number} num
+   */
+  ceil: (num) => {},
 
-  base10: function(str) {
+  /**
+   * Round a number to thelargest integer less than or equal to a given number
+   * @param {Number} num
+   */
+  floor: (num) => {},
 
-  },
+  /**
+   * Find the highest-valued number
+   * @param {Number} a
+   * @param {Number} b
+   */
+  max: (a, b) => {},
 
-  convertToBinary: function(num) {
-
-  },
-
-  multiply: function(a, b) {
-
-  }
+  /**
+   * Find the lowest-valued number
+   * @param {Number} a
+   * @param {Number} b
+   */
+  min: (a, b) => {},
 };

@@ -1,15 +1,23 @@
-exports = typeof window === 'undefined' ? global : window;
+exports = typeof window === "undefined" ? global : window;
 
 exports.stringsAnswers = {
-  reduceString: function(str, amount) {
+  /**
+   * Find the index where the substring appeared
+   * @param {String} quote
+   * @param {String} substring
+   */
+  index: (quote, substring) => {},
 
-  },
+  /**
+   * Check if the quote contains the substring
+   * @param {String} quote
+   * @param {String} substring
+   */
+  contains: (quote, substring) => {},
 
-  wordWrap: function(str, cols) {
-
-  },
-
-  reverseString: function(str) {
-
-  }
+  /**
+   * To capitalize the first character of a string
+   * @param {String} str
+   */
+  capitalize: (str) => {},
 };

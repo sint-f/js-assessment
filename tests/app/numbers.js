@@ -1,32 +1,36 @@
-if ( typeof window === 'undefined' ) {
-  require('../../app/numbers');
-  var expect = require('chai').expect;
+if (typeof window === "undefined") {
+  require("../../app/numbers");
+  var expect = require("chai").expect;
 }
 
-describe('numbers', function() {
-  describe('binary operations', function() {
-    it('you should be able to find the value of a given bit', function() {
-      expect(numbersAnswers.valueAtBit(128, 8)).to.eql(1);
-      expect(numbersAnswers.valueAtBit(65, 1)).to.eql(1);
-      expect(numbersAnswers.valueAtBit(65, 7)).to.eql(1);
-      expect(numbersAnswers.valueAtBit(128, 1)).to.eql(0);
-    });
-
-    it('you should be able to return the base10 representation of a binary string', function() {
-      expect(numbersAnswers.base10('11000000')).to.eql(192);
-    });
-
-    it('you should be able to convert an eight-bit number to a binary string', function() {
-      expect(numbersAnswers.convertToBinary(128)).to.eql('10000000');
-      expect(numbersAnswers.convertToBinary(65)).to.eql('01000001');
-    });
+describe("numbers", function () {
+  it("you should be able to round a number to the nearest integer", function () {
+    expect(numbersAnswers.round(128.8)).to.eql(129);
+    expect(numbersAnswers.round(12.2)).to.eql(12);
+    expect(numbersAnswers.round(12.5)).to.eql(13);
   });
 
-  describe('decimals', function() {
-    it('you should be able to multiply with precision', function() {
-      expect(numbersAnswers.multiply(3, 0.1)).to.eql(0.3);
-      expect(numbersAnswers.multiply(3, 0.2)).to.eql(0.6);
-      expect(numbersAnswers.multiply(3, 0.0001)).to.eql(0.0003);
-    });
+  it("you should be able to round a number to the next largest integer", function () {
+    expect(numbersAnswers.ceil(0.95)).to.eql(1);
+    expect(numbersAnswers.ceil(7.004)).to.eql(8);
+    expect(numbersAnswers.ceil(-7.004)).to.eql(-7);
+  });
+
+  it("you should be able to round a number to the largest integer less than or equal to a given number", function () {
+    expect(numbersAnswers.floor(5.95)).to.eql(5);
+    expect(numbersAnswers.floor(5.05)).to.eql(5);
+    expect(numbersAnswers.floor(-5.05)).to.eql(-6);
+  });
+
+  it("you should be able to find the highest-valued number", function () {
+    expect(numbersAnswers.max(1, 3)).to.eql(3);
+    expect(numbersAnswers.max(5, 2)).to.eql(5);
+    expect(numbersAnswers.max(-5, -3)).to.eql(-3);
+  });
+
+  it("you should be able to find the lowest-valued number", function () {
+    expect(numbersAnswers.min(1, 3)).to.eql(1);
+    expect(numbersAnswers.min(5, 2)).to.eql(2);
+    expect(numbersAnswers.min(-5, -3)).to.eql(-5);
   });
 });

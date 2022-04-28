@@ -1,5 +1,5 @@
 /* eslint-disable */
-exports = typeof window === 'undefined' ? global : window;
+exports = typeof window === "undefined" ? global : window;
 
 /**
  * This file defines an object with some methods. Some of these methods are
@@ -8,19 +8,34 @@ exports = typeof window === 'undefined' ? global : window;
  */
 
 exports.bestPracticesAnswers = {
-  globals: function() {
+  /**
+   * Avoid global variables
+   * @description Now myObject is a window variable
+   */
+  globals: () => {
     myObject = {
-      name: 'Jory'
+      name: "Jory",
     };
 
     return myObject;
   },
 
-  parseInt: function(num) {
-    return parseInt(num);
-  },
+  /**
+   * ParseInt correctly
+   * @param {String} str
+   */
+  parseInt: (str) => {},
 
-  identity: function(val1, val2) {
+  /**
+   * Number correctly
+   * @param {String} str
+   */
+  Number: (str) => {},
 
-  }
+  /**
+   * Understand strict comparison
+   * @param {Number} val1
+   * @param {String | Number | Boolean} val2
+   */
+  identity: (val1, val2) => {},
 };
