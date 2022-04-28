@@ -3,8 +3,8 @@ if (typeof window === "undefined") {
   var expect = require("chai").expect;
 }
 
-describe("BONUS: flow control", function () {
-  it("you should be able to conditionally branch your code", function () {
+describe("BONUS: flow control", () => {
+  it("you should be able to conditionally branch your code", () => {
     var num = 0;
 
     while (num % 3 === 0 || num % 5 === 0) {

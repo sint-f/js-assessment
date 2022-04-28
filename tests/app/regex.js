@@ -3,13 +3,13 @@ if (typeof window === "undefined") {
   var expect = require("chai").expect;
 }
 
-describe("BONUS: regular expressions", function () {
-  it("you should be able to detect a number in a string", function () {
+describe("BONUS: regular expressions", () => {
+  it("you should be able to detect a number in a string", () => {
     expect(regexAnswers.containsNumber("abc123")).to.eql(true);
     expect(regexAnswers.containsNumber("abc")).to.eql(false);
   });
 
-  it("you should be able to determine whether a string matches a pattern", function () {
+  it("you should be able to determine whether a string matches a pattern", () => {
     // the pattern is XXX-XXX-XXXX where all X's are digits
     expect(regexAnswers.matchesPattern("800-555-1212")).to.eql(true);
     expect(regexAnswers.matchesPattern("451-933-7899")).to.eql(true);
