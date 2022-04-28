@@ -1,12 +1,11 @@
 {
-  "author": "Rebecca Murphey <rmurphey@gmail.com> (http://rmurphey.com)",
+  "author": "Jeroen Smits <info@jeroen-smits.nl>",
   "name": "js-assessment",
   "description": "A test-driven assessment of JavaScript skills",
-  "version": "0.3.0",
-  "homepage": "http://rmurphey.com",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/rmurphey/js-assessment.git"
+    "url": "git://github.com/jeroensmits-fe/js-assessment.git"
   },
   "engines": {
     "node": "0.12.x"
@@ -23,9 +22,6 @@
     "test": "mocha -R spec 'tests/app'",
     "lint": "eslint --quiet tests/app app",
     "lint-warn": "eslint tests/app app"
-  },
-  "bugs": {
-    "url": "https://github.com/rmurphey/js-assessment/issues"
   },
   "private": true,
   "devDependencies": {
