@@ -21,8 +21,3 @@ files in the `tests/app` directory, and edit the files in the `app/` directory.
 Once you update a test, you can reload the test page in the browser to see
 whether it worked.
 Every function in `app/` should return the outcome
-
-### Data-driven tests
-
-If your tests need data that can be fetched via XHR, stick a `.json` file in
-the `data` directory; you can access it at `/data/<filename>.json`.
