@@ -13,7 +13,7 @@ exports.bestPracticesAnswers = {
    * @description Now myObject is a window variable
    */
   globals: () => {
-    myObject = {
+    var myObject = {
       name: "Jory",
     };
 
@@ -24,7 +24,8 @@ exports.bestPracticesAnswers = {
    * ParseInt correctly
    * @param {String} str
    */
-  parseInt: (str) => {},
+  parseInt: (str) => {
+  },
 
   /**
    * Number correctly
