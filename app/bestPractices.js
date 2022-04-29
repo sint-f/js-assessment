@@ -24,19 +24,18 @@ exports.bestPracticesAnswers = {
    * ParseInt correctly
    * @param {String} str
    */
-  parseInt: (str) => {
-  },
+  parseInt: (str) => parseInt(str, 10),
 
   /**
    * Number correctly
    * @param {String} str
    */
-  Number: (str) => {},
+  Number: (str) => Number(str),
 
   /**
    * Understand strict comparison
    * @param {Number} val1
    * @param {String | Number | Boolean} val2
    */
-  identity: (val1, val2) => {},
+  identity: (val1, val2) => val1 === val2,
 };
